@@ -20,8 +20,27 @@ The optional action button allows for multiple interaction with the same window 
 ## Example
 [Check out demo and example of use!](http://mapshakers.github.io/projects/leaflet-control-window)
 
+
+### Installation
+
+#### Install via npm
+
+```
+npm i leaflet-control-window
+```
+
+
+#### Install Manually
+
+Download
+[`L.Control.Window.css`](https://github.com/pedroalvesr/leaflet-control-window/blob/master/src/L.Control.Window.css) and
+[`L.Control.Window.js`](https://github.com/pedroalvesr/leaflet-control-window/blob/master/src/L.Control.Window.js)
+and include them in your project.
+
+
 ## Getting started
 Using leaflet-control-window plugin is very easy and comfortable.
+
 
 ### Quick usage
 * Download and place files from ```src``` dir to the same folder in your project.
@@ -30,12 +49,16 @@ Using leaflet-control-window plugin is very easy and comfortable.
      <script src="...path-to-files.../L.Control.Window.js"></script>
      <link rel="stylesheet" href="...path-to-file.../L.Control.Window.css" />
 ```
-* Then use in simple way in javascript file:
-```javascript
-// Creating window object
-var win =  L.control.window(map,{title:'Hello world!',content:'This is my first control window.'})
-           .show()
+
+
+#### Include as ES6 Module
+
+```js
+import 'leaflet-control-window';
+import 'L.Control.Window.css';
 ```
+
+
 ### How to use
 ```javascript
 L.control.window( <Map> map ,<window options> options?)
@@ -52,6 +75,8 @@ var winMtds = L.control.window(map)
         .content('First paragraph.')
         .show()
 ```
+
+
 ### Options
 | Property        | Description            | Default Value | Possible  values                                     |
 | --------------- | ---------------------- | ------------- | ---------------------------------------------------- |
@@ -59,6 +84,8 @@ var winMtds = L.control.window(map)
 | content         | Sets window content.           | null    | HTMLElement&#124;String                                          |
 | modal           | Modal&#124;modeless window mode?  |  false       | Boolean                                       |
 | position        | Sets where to show window.   |  'center'       | 'center', 'top', 'topRight', 'right', 'bottomRight', 'bottom', 'bottomLeft', 'left', 'topLeft' |
+
+
 
 ### Methods
 | Method          | Returns       | Description                                     |
@@ -72,6 +99,8 @@ var winMtds = L.control.window(map)
 | close()         | undefined  |  Hide and remove window.        |
 | enableBtn()         | undefined  |  Enables the OK button of the window (default).       |
 | disableBtn()         | undefined  |  Disables the OK button of the window.        |
+
+
 
 ### Other options
 | Property        | Description            | Default Value | Possible  values                                     |
@@ -87,6 +116,8 @@ var winMtds = L.control.window(map)
 | prompt.buttonCancel | Text for ```Cancel``` button         |  button hidden by default        | String   |
 | visible | Render window immediately.         |  false         | Boolean   |
 
+
+
 ### Other  Methods
 | Method          | Returns       | Description                                     |
 | --------------- | ------------- | ---------------------------------------------------- |
@@ -94,6 +125,8 @@ var winMtds = L.control.window(map)
 | hide()    | L.control.window object  |  Hide window, can be rendered by ```.show()``` method.     |
 | prompt(JSON object)      | L.control.window object  |  Sets prompt option.      |
 | setPromptCallback(<function>)      | L.control.window object  |  Sets prompt option.      |
+
+
 
 ### Events
 | Event          | Description                                     |
@@ -105,3 +138,7 @@ var winMtds = L.control.window(map)
 
 ### License
 **leaflet-control-window** is free software, and may be redistributed under the MIT-LICENSE.
+
+### Credit
+
+This whole structure was based on the [mapshakers](https://github.com/mapshakers/leaflet-control-window) project. So don't be surprised to see somefamiliar code.
